@@ -72,6 +72,8 @@ if st.button("预测" if Language == "中文" else "Predict"):
     if cn7 >= 1.0:
         st.write("你的硬盘最多还能用大约 "if Language == "中文" else "The hard drive will last for about ",[10000,100,80,60,40,20,2][int(cn7)]," 天" if Language == "中文" else " days.")
     st.caption("预测结果仅供参考, 不应作为硬盘故障的判断依据" if Language == "中文" else "The prediction result is for reference only and should not be used as a basis for determining hard disk failure.")
+    st.caption("模型训练数据来自 Backblaze" if Language == "中文" else "The training data of the model comes from Backblaze")
+    st.caption("模型制作程序参考 https://github.com/cyyself/big-data-homework-artifacts/tree/master" if Language == "中文" else "The model making program refers to https://github.com/cyyself/big-data-homework-artifacts/tree/master")
     # 绘制概率折线图
     st.write("概率图: " if Language == "中文" else "Probability chart: ")
     # 创建一个包含两个数据集的数据框
